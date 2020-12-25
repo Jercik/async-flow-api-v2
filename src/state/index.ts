@@ -2,7 +2,7 @@ import { ActionType } from "typesafe-actions";
 import * as appActions from "./app/appActions";
 import * as featureOneActions from "./featureOne/featureOneActions";
 
-const allActions = {
+export const allActions = {
   appActions,
   featureOneActions,
 };
