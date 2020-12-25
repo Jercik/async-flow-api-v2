@@ -1,0 +1,10 @@
+/* ***************** *
+ *   ACTION TYPES    *
+ * ***************** */
+
+export enum FeatureOneActionTypes {
+  FETCH_DATA = "@FEATURE_ONE/FETCH_DATA",
+  FETCH_DATA_REQUEST = "@FEATURE_ONE/FETCH_DATA_REQUEST",
+  FETCH_DATA_SUCCESS = "@FEATURE_ONE/FETCH_DATA_SUCCESS",
+  FETCH_DATA_FAILURE = "@FEATURE_ONE/FETCH_DATA_FAILURE",
+}
