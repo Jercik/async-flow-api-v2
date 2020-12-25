@@ -1,0 +1,22 @@
+node_modules
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+logs/
+
+# IDE
+.idea
+.vscode
+
+# Testing
+coverage
+
+# Package build dirs
+packages/*/lib/
+dist
+
+# custom Env
+.envrc.custom
+

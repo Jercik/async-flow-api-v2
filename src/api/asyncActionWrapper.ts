@@ -4,8 +4,4 @@ import { AsyncSuffix } from "../model/api/apiTypes";
 export const createAsyncActionWrapper = <TypeConst extends string>(
   type: TypeConst
 ) => <R, S, F>() =>
-  createAsyncAction(
-    `${type}${AsyncSuffix.REQUEST}` as const,
-    `${type}${AsyncSuffix.SUCCESS}` as const,
-    `${type}${AsyncSuffix.FAILURE}` as const
-  )<R, S, F>();
+  createAsyncAction("ACTION1", "ACTION2", "ACTION3")<R, S, F>();
