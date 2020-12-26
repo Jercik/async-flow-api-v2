@@ -12,7 +12,7 @@ export const featureOneReducer: Reducer<
   ActionType<typeof featureOneActions>
 > = (state: FeatureOneState = initialFeatureOneState, action) => {
   switch (action.type) {
-    case getType(featureOneActions.featureOneFetchDataAction):
+    case getType(featureOneActions.featureOneFetchDataAction.success):
       return state;
     default:
       return state;

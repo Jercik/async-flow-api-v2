@@ -3,7 +3,7 @@ import { AsyncSuffix } from "../model/api/apiTypes";
 import {
   FetchRequestPayloadType,
   FetchRequestMetaType,
-} from "model/api/fetchApiTypes";
+} from "../model/api/fetchApiTypes";
 
 export const createFetchRequestAction = <TypeConst extends string>(
   type: TypeConst
