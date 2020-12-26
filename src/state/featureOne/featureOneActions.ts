@@ -6,7 +6,7 @@ import {
 } from "../../model/api/fetchApiTypes";
 import { createFetchRequestAction } from "../../api/asyncActionWrappers";
 
-interface FeatureOneSuccessPayloadType {
+export interface FeatureOneSuccessPayloadType {
   field1: string;
   field2: string;
   field3: string;
