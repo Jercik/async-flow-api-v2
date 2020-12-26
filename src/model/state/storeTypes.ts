@@ -9,5 +9,6 @@ export interface AppState {
 
 export interface FeatureOneState {
   isFetching: boolean;
+  isError: boolean;
   data: any;
 }

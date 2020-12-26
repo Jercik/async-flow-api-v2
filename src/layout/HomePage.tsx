@@ -2,7 +2,12 @@ import { getAppInitialised, initialiseAppAction } from "../state/app";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Dispatch } from "redux";
-import { featureOneFetchDataAction } from "../state/featureOne";
+import {
+  featureOneFetchDataAction,
+  FeatureOneSuccessPayloadType,
+  getFeatureOneData,
+  getIsFeatureOneFetching,
+} from "../state/featureOne";
 
 /* ************ *
  *   HOMEPAGE   *
@@ -15,24 +20,36 @@ interface HomePageProps {}
 export const HomePage = (props: HomePageProps) => {
   const dispatch: Dispatch = useDispatch();
   const isAppInitialised: boolean = useSelector(getAppInitialised);
+  const isFeatureOneFetching: boolean = useSelector(getIsFeatureOneFetching);
+  const featureOneData: FeatureOneSuccessPayloadType = useSelector(
+    getFeatureOneData
+  );
 
   useEffect(() => {
     dispatch(initialiseAppAction());
+  }, [dispatch]);
 
-    // fetch featureOne
+  const handleFetchFeatureOne = () => {
+    // fetch featureOne data
     dispatch(
       featureOneFetchDataAction.request(
         { endpoint: "test" }, // payload overrides
         { shouldDispatchEmptyBodyAction: true } // meta overrides
       )
     );
-  }, [dispatch]);
+  };
 
   return (
     <div className="App">
       <h1>BlockFi Async Flow API V2</h1>
       <h2>Feel free to browse the code :)</h2>
       {isAppInitialised && <p>App has been initialised</p>}
+      {!isFeatureOneFetching ? (
+        <button onClick={handleFetchFeatureOne}>Fetch Feature One Data</button>
+      ) : (
+        <strong>Fetching data...</strong>
+      )}
+      {featureOneData && <p>{JSON.stringify(featureOneData)}</p>}
     </div>
   );
 };
