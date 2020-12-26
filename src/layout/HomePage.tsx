@@ -2,7 +2,10 @@ import { getAppInitialised, initialiseAppAction } from "../state/app";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Dispatch } from "redux";
-import { featureOneFetchDataAction } from "../state/featureOne";
+import {
+  featureOneAsyncAction,
+  featureOneFetchDataAction,
+} from "../state/featureOne";
 
 /* ************ *
  *   HOMEPAGE   *
@@ -21,7 +24,7 @@ export const HomePage = (props: HomePageProps) => {
 
     // fetch featureOne
     dispatch(
-      featureOneFetchDataAction(
+      featureOneAsyncAction.request(
         { endpoint: "test" }, // payload
         { shouldDispatchEmptyBodyAction: true } // meta
       )

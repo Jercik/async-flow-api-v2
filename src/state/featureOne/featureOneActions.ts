@@ -36,7 +36,7 @@ export const featureOneAsyncAction = createAsyncAction(
   FeatureOneActionTypes.FETCH_DATA_SUCCESS,
   FeatureOneActionTypes.FETCH_DATA_FAILURE
 )<
-  [FetchRequestPayloadType, FetchRequestMetaType],
+  [Partial<FetchRequestPayloadType>, Partial<FetchRequestMetaType>],
   FeatureOneSuccessPayloadType,
   Error
 >();
