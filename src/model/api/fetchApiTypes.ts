@@ -1,3 +1,4 @@
+// global payload for the fetch requests
 export interface FetchRequestPayloadType {
   onReceive?: () => any;
   onFailure?: () => any;
@@ -17,11 +18,11 @@ export interface FetchRequestMetaType {
   takeOnce?: boolean;
 }
 
-export interface RequestConfig {
-  [key: string]: RequestActionConfig;
+export interface FetchRequestConfig {
+  [key: string]: FetchRequestActionConfig;
 }
 
-export interface RequestActionConfig {
+export interface FetchRequestActionConfig {
   payload: FetchRequestPayloadType;
   meta?: FetchRequestMetaType;
 }

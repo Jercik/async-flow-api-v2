@@ -22,8 +22,8 @@ export const HomePage = (props: HomePageProps) => {
     // fetch featureOne
     dispatch(
       featureOneFetchDataAction.request(
-        { endpoint: "test" }, // payload
-        { shouldDispatchEmptyBodyAction: true } // meta
+        { endpoint: "test" }, // payload overrides
+        { shouldDispatchEmptyBodyAction: true } // meta overrides
       )
     );
   }, [dispatch]);

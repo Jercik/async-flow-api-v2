@@ -1,11 +1,11 @@
-import { RequestActionConfig } from "../model/api/fetchApiTypes";
+import { FetchRequestActionConfig } from "../model/api/fetchApiTypes";
 import { take, fork } from "@redux-saga/core/effects";
-import { requestConfig } from "./config/requestConfig";
+import { fetchRequestConfig } from "./config/fetchRequestConfig";
 import { Action } from "typesafe-actions";
 
 function* makeAsyncRequest(
   action: Action,
-  actionRequestConfig: RequestActionConfig
+  actionRequestConfig: FetchRequestActionConfig
 ): Generator {
   yield;
   console.log("ASYNC_SAGA", action, actionRequestConfig);
@@ -14,8 +14,8 @@ function* makeAsyncRequest(
 export function* watchAsyncActions() {
   while (true) {
     const action: Action = yield take("*");
-    const actionRequestConfig: RequestActionConfig | undefined =
-      requestConfig[action.type];
+    const actionRequestConfig: FetchRequestActionConfig | undefined =
+      fetchRequestConfig[action.type];
     const isAsyncRequestAction: boolean = !!actionRequestConfig;
 
     if (isAsyncRequestAction) {
