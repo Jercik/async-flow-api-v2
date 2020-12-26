@@ -1,1 +1,34 @@
-<mxfile host="app.diagrams.net" modified="2020-12-26T21:22:18.281Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.2 Safari/605.1.15" version="14.1.2" etag="416D6it58hpQSH5Rk8t-" type="github"><diagram id="0cKz7GVX8Hbi2fVBNxLy">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2020-12-26T21:26:00.242Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.2 Safari/605.1.15" etag="JcV7ICIGytU2dZ38oLAm" version="14.1.2" type="github">
+  <diagram id="0cKz7GVX8Hbi2fVBNxLy" name="Page-1">
+    <mxGraphModel dx="1175" dy="687" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="AtQm-DE2rKrlBeYkbVDE-1" value="async-flow-api-v2" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=23;" vertex="1" parent="1">
+          <mxGeometry x="300" y="30" width="220" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="AtQm-DE2rKrlBeYkbVDE-2" value="&lt;font style=&quot;font-size: 12px&quot;&gt;Action Types&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="160" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="AtQm-DE2rKrlBeYkbVDE-3" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Action Creators&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="230" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="AtQm-DE2rKrlBeYkbVDE-4" value="&lt;font style=&quot;font-size: 12px&quot;&gt;Reducer&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="300" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="AtQm-DE2rKrlBeYkbVDE-5" value="&lt;font style=&quot;font-size: 12px&quot;&gt;Selectors&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="370" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="AtQm-DE2rKrlBeYkbVDE-6" value="&lt;font style=&quot;font-size: 12px&quot;&gt;Feature own Sagas&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="440" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="AtQm-DE2rKrlBeYkbVDE-7" value="" style="endArrow=classic;html=1;fontSize=12;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="AtQm-DE2rKrlBeYkbVDE-2" target="AtQm-DE2rKrlBeYkbVDE-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="300" as="sourcePoint" />
+            <mxPoint x="440" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
