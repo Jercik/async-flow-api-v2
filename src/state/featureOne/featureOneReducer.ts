@@ -1,5 +1,4 @@
-import { AnyAction } from "redux";
-import { ActionType, createReducer, getType, Reducer } from "typesafe-actions";
+import { ActionType, getType, Reducer } from "typesafe-actions";
 import { FeatureOneState } from "../../model/state/storeTypes";
 import * as featureOneActions from "./featureOneActions";
 

@@ -21,7 +21,7 @@ export interface FeatureOneSuccessPayloadType {
 // The _REQUEST action will take the payload from the config, but it's possible
 // pass the overrides for the payload and meta creators.
 export const featureOneFetchDataAction = createFetchRequestAction(
-  FeatureOneActionTypes.FETCH_DATA
+  FeatureOneActionTypes.FETCH_DATA_REQUEST
 )<FeatureOneSuccessPayloadType>();
 
 // it's also possible to use the standard createAsyncAction and define own action types

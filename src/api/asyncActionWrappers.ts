@@ -4,16 +4,17 @@ import {
   FetchRequestPayloadType,
   FetchRequestMetaType,
 } from "../model/api/fetchApiTypes";
+import { getActionName } from "../utils";
 
 // this wrapper simplifies writing the action creators by enforcing the REQUEST and FAILURE payload types
 // and automatic creation of three async actions: _REQUEST, _SUCCESS and _FAILURE
-export const createFetchRequestAction = <TypeConst extends string>(
-  type: TypeConst
+export const createFetchRequestAction = <ActionType extends string>(
+  type: ActionType
 ) => <SuccessPayloadAction>() =>
   createAsyncAction(
-    `${type}${AsyncSuffix.REQUEST}` as const,
-    `${type}${AsyncSuffix.SUCCESS}` as const,
-    `${type}${AsyncSuffix.FAILURE}` as const
+    `${getActionName(type, AsyncSuffix.REQUEST)}` as const,
+    `${getActionName(type, AsyncSuffix.SUCCESS)}` as const,
+    `${getActionName(type, AsyncSuffix.FAILURE)}` as const
   )<
     [Partial<FetchRequestPayloadType> | {}, Partial<FetchRequestMetaType | {}>],
     SuccessPayloadAction,
